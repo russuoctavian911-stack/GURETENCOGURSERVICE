@@ -1,0 +1,43 @@
+
+:root{
+  --accent:#e11d2d;
+  --bg-overlay: rgba(0,0,0,0.65);
+  --card-bg: rgba(20,20,20,0.75);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+.hero{
+  min-height:100vh;
+  background-image: url('garage-bg.jpg');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  position:relative;
+  padding:32px;
+}
+.overlay{
+  position:absolute;inset:0;background:var(--bg-overlay);
+  backdrop-filter: blur(4px);
+}
+.content{position:relative;z-index:2;max-width:980px;width:100%;text-align:center;padding:20px}
+h1{font-size:40px;margin:0 0 8px;color:var(--accent);text-shadow:0 6px 18px rgba(0,0,0,0.6)}
+.lead{color:#e6e6e6;margin-bottom:24px}
+.card{
+  width:340px;margin:0 auto;background:var(--card-bg);padding:18px;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,0.6);
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+}
+.card-img{width:100%;border-radius:10px;object-fit:cover}
+h2{margin:6px 0 0 0}
+.contact{margin:0}
+a{color:inherit}
+.btn{
+  display:inline-block;margin-top:6px;padding:10px 14px;border-radius:12px;background:var(--accent);color:white;text-decoration:none;font-weight:600;
+}
+.footer{margin-top:18px;color:#cfcfcf;font-size:13px}
+@media(min-width:800px){
+  .content{display:flex;gap:40px;align-items:center;justify-content:center;text-align:left}
+  .card{margin:0}
+}
